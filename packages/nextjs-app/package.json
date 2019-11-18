@@ -1,0 +1,24 @@
+{
+  "name": "nextjs-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "use-custom-element": "^1.0.5",
+    "express": "^4.17.1",
+    "next": "^9.1.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "stencil-web-components": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.5",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "16.9.2",
+    "nodemon": "^1.19.4",
+    "typescript": "^3.6.4"
+  }
+}

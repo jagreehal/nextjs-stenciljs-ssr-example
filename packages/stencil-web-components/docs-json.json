@@ -1,0 +1,275 @@
+{
+  "timestamp": "2019-09-19T20:59:20",
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.4.0",
+    "typescriptVersion": "3.6.2"
+  },
+  "components": [
+    {
+      "tag": "todo-count",
+      "filePath": "src/components/todo-count/todo-count.tsx",
+      "encapsulation": "none",
+      "readme": "# todo-count\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "numberOfActiveTodos",
+          "type": "number",
+          "mutable": false,
+          "attr": "number-of-active-todos",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": [],
+      "slots": []
+    },
+    {
+      "tag": "todo-filters",
+      "filePath": "src/components/todo-filters/todo-filters.tsx",
+      "encapsulation": "none",
+      "readme": "# todo-filters\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "anyCompleted",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "any-completed",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "filter",
+          "type": "string",
+          "mutable": false,
+          "attr": "filter",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "'all'",
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "clear-completed",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        },
+        {
+          "event": "set-filter",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [],
+      "slots": []
+    },
+    {
+      "tag": "todo-input",
+      "filePath": "src/components/todo-input/todo-input.tsx",
+      "encapsulation": "none",
+      "readme": "# todo-input\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [
+        {
+          "event": "input-submit",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [],
+      "slots": []
+    },
+    {
+      "tag": "todo-item",
+      "filePath": "src/components/todo-item/todo-item.tsx",
+      "encapsulation": "none",
+      "readme": "# todo-item\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "completed",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "completed",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "mutable": false,
+          "attr": "text",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "item-changed",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        },
+        {
+          "event": "item-check",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        },
+        {
+          "event": "item-remove",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [],
+      "slots": []
+    },
+    {
+      "tag": "todo-list",
+      "filePath": "src/components/todo-list/todo-list.tsx",
+      "encapsulation": "none",
+      "readme": "# todo-list\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "todos",
+          "type": "string",
+          "mutable": false,
+          "attr": "todos",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "change-todo",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        },
+        {
+          "event": "check-todo",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        },
+        {
+          "event": "remove-todo",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [],
+      "slots": []
+    },
+    {
+      "tag": "todo-toggle",
+      "filePath": "src/components/todo-toggle/todo-toggle.tsx",
+      "encapsulation": "none",
+      "readme": "# todo-toggle\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [
+        {
+          "event": "toggle-all",
+          "detail": "any",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": "",
+          "docsTags": []
+        }
+      ],
+      "styles": [],
+      "slots": []
+    }
+  ]
+}

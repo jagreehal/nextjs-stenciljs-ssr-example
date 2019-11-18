@@ -1,0 +1,19 @@
+:host {
+  color: rgb(48, 48, 48);
+}
+
+h3 {
+  margin-top: 2rem;
+}
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+.todo-item {
+  padding: 10px;
+  border-bottom: 1px solid var(--todo-item-border, black);
+}

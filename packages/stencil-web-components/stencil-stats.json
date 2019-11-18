@@ -1,0 +1,197 @@
+{
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.8.1"
+  },
+  "app": {
+    "namespace": "TodoMvcStencilWebComponents",
+    "fsNamespace": "todo-mvc-stencil-web-components",
+    "components": 6,
+    "entries": 6,
+    "bundles": 0
+  },
+  "options": {
+    "minifyJs": true,
+    "minifyCss": true,
+    "hashFileNames": true,
+    "hashedFileNameLength": 8,
+    "buildEs5": true
+  },
+  "components": [
+    {
+      "tag": "todo-count",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "todo-filters",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "todo-input",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "todo-list",
+      "dependencyOf": [],
+      "dependencies": [
+        "todo-item"
+      ]
+    },
+    {
+      "tag": "todo-toggle",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "todo-item",
+      "dependencyOf": [
+        "todo-list"
+      ],
+      "dependencies": []
+    }
+  ],
+  "entries": [
+    {
+      "entryId": "todo-count.entry",
+      "components": [
+        {
+          "tag": "todo-count",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/todo-mvc-refactor-stencil-web-components/todo-mvc-stencil-web-components/src/components/todo-count/todo-count.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "todo-filters.entry",
+      "components": [
+        {
+          "tag": "todo-filters",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/todo-mvc-refactor-stencil-web-components/todo-mvc-stencil-web-components/src/components/todo-filters/todo-filters.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "todo-input.entry",
+      "components": [
+        {
+          "tag": "todo-input",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/todo-mvc-refactor-stencil-web-components/todo-mvc-stencil-web-components/src/components/todo-input/todo-input.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "todo-list.entry",
+      "components": [
+        {
+          "tag": "todo-list",
+          "dependencyOf": [],
+          "dependencies": [
+            "todo-item"
+          ]
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/todo-mvc-refactor-stencil-web-components/todo-mvc-stencil-web-components/src/components/todo-list/todo-list.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "todo-toggle.entry",
+      "components": [
+        {
+          "tag": "todo-toggle",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/todo-mvc-refactor-stencil-web-components/todo-mvc-stencil-web-components/src/components/todo-toggle/todo-toggle.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "todo-item.entry",
+      "components": [
+        {
+          "tag": "todo-item",
+          "dependencyOf": [
+            "todo-list"
+          ],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/todo-mvc-refactor-stencil-web-components/todo-mvc-stencil-web-components/src/components/todo-item/todo-item.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    }
+  ],
+  "sourceGraph": {
+    "src/components/todo-count/todo-count.stories.tsx": [],
+    "src/components/todo-count/todo-count.tsx": [],
+    "src/components/todo-filters/todo-filters.stories.tsx": [],
+    "src/components/todo-filters/todo-filters.tsx": [],
+    "src/components/todo-input/todo-input.stories.tsx": [],
+    "src/components/todo-input/todo-input.tsx": [],
+    "src/components/todo-item/todo-item.stories.tsx": [],
+    "src/components/todo-item/todo-item.tsx": [],
+    "src/components/todo-list/todo-list.stories.tsx": [],
+    "src/components/todo-list/todo-list.tsx": [],
+    "src/components/todo-toggle/todo-toggle.stories.tsx": [],
+    "src/components/todo-toggle/todo-toggle.tsx": []
+  },
+  "collections": []
+}

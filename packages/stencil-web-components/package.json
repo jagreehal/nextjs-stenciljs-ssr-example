@@ -1,0 +1,51 @@
+{
+  "name": "stencil-web-components",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Stencil Web Components",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "copy": "cp ./{CNAME,CORS} ./dist",
+    "predeploy": "npm run build && npm run copy",
+    "deploy": "surge dist",
+    "build": "NODE_ENV=production stencil build --stats",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "start": "stencil build --watch --serve",
+    "storybook": "start-storybook -p 9006 -s dist",
+    "stylelint:fix": "stylelint --fix \"src/**/*.css\"",
+    "test": "stencil test --spec --e2e --screenshot --headless",
+    "test.ci": "stencil test --spec --e2e --ci",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "test.unit": "stencil test --spec",
+    "test.e2e": "stencil test --e2e --headless",
+    "test.screenshot": "stencil test --e2e --screenshot"
+  },
+  "author": "Jag Reehal",
+  "license": "ISC",
+  "dependencies": {
+    "@stencil/core": "^1.8.1"
+  },
+  "devDependencies": {
+    "@stencil/eslint-plugin": "0.2.1",
+    "@types/jest": "24.0.23",
+    "@typescript-eslint/parser": "2.7.0",
+    "@types/node": "^12.12.8",
+    "@types/prettier": "^1.18.3",
+    "@types/puppeteer": "^1.20.2",
+    "autoprefixer": "^9.7.1",
+    "jest": "24.9.0",
+    "jest-cli": "24.9.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.2"
+  },
+  "jest": {
+    "preset": "@stencil/core/testing"
+  }
+}
