@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/nextjs-app/package.json",
+        "packages/stencil-web-components/hydrate/package.json",
+        "packages/stencil-web-components/package.json"
+      ]
+    }
+  }
+}
