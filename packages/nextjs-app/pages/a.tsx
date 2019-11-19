@@ -18,7 +18,7 @@ function Page({}) {
       <Head>
         <title>This is page A</title>
       </Head>
-      <label style={{ color: "#696969" }}>Message</label>
+      <label className="text-gray-500 mr-4">Message</label>
       <input
         type="text"
         onChange={(e: any) => setMessage(e.target.value)}
@@ -26,13 +26,15 @@ function Page({}) {
       ></input>
 
       <hr />
-      <component-with-event
-        suppressHydrationWarning={true}
-        {...customElementProps}
-        ref={ref}
-      ></component-with-event>
+      <div className="my-4 block">
+        <component-with-event
+          suppressHydrationWarning={true}
+          {...customElementProps}
+          ref={ref}
+        ></component-with-event>
+      </div>
       <hr />
-      <h5>Messages</h5>
+      <h5 className="mt-4">Messages</h5>
       {messages.map((message, index) => (
         <div key={index}>{message}</div>
       ))}

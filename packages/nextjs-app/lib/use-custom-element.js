@@ -1,9 +1,9 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+// taken from https://github.com/the-road-to-learn-react/use-custom-element
 const useCustomElement = (props, customMapping = {}) => {
   const ref = React.createRef(null);
 
-  React.useLayoutEffect(() => {
+  useEffect(() => {
     const { current } = ref;
 
     let fns;

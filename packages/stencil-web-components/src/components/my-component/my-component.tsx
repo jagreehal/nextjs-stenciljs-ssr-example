@@ -1,9 +1,9 @@
-import { Component, Prop, h, State } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, Prop, h, State, Host } from "@stencil/core";
+import { format } from "../../utils/utils";
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: "my-component",
+  styleUrl: "my-component.css",
   scoped: true
 })
 export class MyComponent {
@@ -28,7 +28,7 @@ export class MyComponent {
   @State()
   count: number = this.initialCount || 100;
   async click() {
-    console.log('click', this.count);
+    console.log("click", this.count);
     this.count++;
   }
 
@@ -38,16 +38,16 @@ export class MyComponent {
 
   render() {
     return (
-      <div>
+      <Host>
         Hello, World! I'm {this.getText()}
         <div>
           <h3>Change Local State</h3>
-          {this.count} -{' '}
+          {this.count} -{" "}
           <button class="green" onClick={() => this.click()}>
             Click
           </button>
         </div>
-      </div>
+      </Host>
     );
   }
 }

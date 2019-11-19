@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 export default () => (
-  <div>
+  <div className="text-blue-500">
     <div>
       <Link href="/a">
         <a>a</a>

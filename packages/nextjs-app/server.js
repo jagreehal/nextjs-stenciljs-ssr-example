@@ -11,9 +11,7 @@ app.prepare().then(() => {
   const server = express();
 
   // static assets
-  server.get("/_next/*", (req, res) => {
-    return handle(req, res);
-  });
+  server.get("/_next/*", handle);
 
   server.all("*", async (req, res) => {
     const html = await app.renderToHTML(req, res, req.path, req.query);

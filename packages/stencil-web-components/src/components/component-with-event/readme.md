@@ -9,7 +9,7 @@
 
 | Property  | Attribute | Description | Type     | Default |
 | --------- | --------- | ----------- | -------- | ------- |
-| `message` | `message` |             | `string` | `''`    |
+| `message` | `message` |             | `string` | `""`    |
 
 
 ## Events

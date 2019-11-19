@@ -18,7 +18,7 @@ function Page({ initialMessage }) {
       <Head>
         <title>This is page B with the value set in the query string</title>
       </Head>
-      <label>Message</label>
+      <label className="mr-4">Message</label>
       <input
         type="text"
         onChange={(e: any) => setMessage(e.target.value)}
@@ -26,13 +26,15 @@ function Page({ initialMessage }) {
       ></input>
 
       <hr />
-      <component-with-event
-        suppressHydrationWarning={true}
-        {...customElementProps}
-        ref={ref}
-      ></component-with-event>
+      <div className="my-4 block">
+        <component-with-event
+          suppressHydrationWarning={true}
+          {...customElementProps}
+          ref={ref}
+        ></component-with-event>
+      </div>
       <hr />
-      <h5>Messages</h5>
+      <h5 className="mt-4">Messages</h5>
       {messages.map((message, index) => (
         <div key={index}>{message}</div>
       ))}

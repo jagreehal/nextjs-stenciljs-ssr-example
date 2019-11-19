@@ -27,6 +27,12 @@ export interface HydrateDocumentOptions {
     url?: string;
     userAgent?: string;
 }
+export interface HydrateFactoryOptions extends RenderToStringOptions {
+    hasTimedOut: boolean;
+    serializeToHtml: boolean;
+    destroyWindow: boolean;
+    destroyDocument: boolean;
+}
 export interface HydrateResults {
     diagnostics: HydrateDiagnostic[];
     url: string;
