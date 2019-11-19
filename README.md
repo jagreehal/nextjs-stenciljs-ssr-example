@@ -1,5 +1,7 @@
 # Example of using Next.js and Stencil components with SSR
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jagreehal/nextjs-stenciljs-ssr-example.svg)](https://greenkeeper.io/)
+
 This is a WIP demo of using server rendered Stencil components in Next.js
 
 It works by using a custom server, and rendering using Next.js and then by Stencil as shown in the example below.
