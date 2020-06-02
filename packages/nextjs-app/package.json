@@ -2,29 +2,23 @@
   "name": "nextjs-app",
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon",
-    "build": "next build",
-    "export": "next export",
-    "start": "NODE_ENV=production node server.js"
+    "dev": "next ./src -p ${PORT-5000}",
+    "build": "next build ./src",
+    "start": "NODE_OPTIONS='--inspect=0' NODE_ENV=production next start ./src -p ${PORT-5000}"
   },
   "dependencies": {
-    "use-custom-element": "^1.0.5",
-    "express": "^4.17.1",
-    "next": "^9.1.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "stencil-web-components": "*"
   },
-  "devDependencies": {
-    "@types/node": "^12.11.5",
-    "@types/react": "^16.9.9",
-    "@types/react-dom": "16.9.2",
-    "@fullhuman/postcss-purgecss": "^1.2.0",
-    "@zeit/next-css": "^1.0.1",
-    "autoprefixer": "^9.6.0",
-    "nodemon": "^1.19.4",
-    "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.0.3",
-    "typescript": "^3.6.4"
+  "devDependencies": {    
+    "@types/node": "^14.0.9",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",    
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
+    "tailwindcss": "^1.4.6",
+    "typescript": "^3.9.3"
   }
 }

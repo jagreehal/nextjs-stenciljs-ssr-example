@@ -2,37 +2,96 @@
   "version": 1.1,
   "tags": [
     {
-      "name": "todo-count",
+      "name": "fetch-example",
       "description": {
         "kind": "markdown",
         "value": ""
       },
       "attributes": [
         {
-          "name": "number-of-active-todos",
+          "name": "q",
           "description": ""
         }
       ]
     },
     {
-      "name": "todo-filters",
+      "name": "my-component",
       "description": {
         "kind": "markdown",
         "value": ""
       },
       "attributes": [
         {
-          "name": "any-completed",
+          "name": "count",
+          "description": "The count value"
+        },
+        {
+          "name": "first",
+          "description": "The first name (doc from the component)"
+        },
+        {
+          "name": "last",
+          "description": "The lastish name"
+        },
+        {
+          "name": "middle",
+          "description": "The middle name"
+        }
+      ]
+    },
+    {
+      "name": "scoped-example",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "first",
           "description": ""
         },
         {
-          "name": "filter",
+          "name": "last",
           "description": ""
         }
       ]
     },
     {
-      "name": "todo-input",
+      "name": "shadow-example",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "first",
+          "description": ""
+        },
+        {
+          "name": "last",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "slot-example",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "first",
+          "description": ""
+        },
+        {
+          "name": "last",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "slot-scoped-example",
       "description": {
         "kind": "markdown",
         "value": ""
@@ -40,47 +99,12 @@
       "attributes": []
     },
     {
-      "name": "todo-item",
+      "name": "slot-shadow-example",
       "description": {
         "kind": "markdown",
         "value": ""
       },
-      "attributes": [
-        {
-          "name": "completed",
-          "description": ""
-        },
-        {
-          "name": "text",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "name": "todo-list",
-      "description": {
-        "kind": "markdown",
-        "value": ""
-      },
-      "attributes": [
-        {
-          "name": "todos",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "name": "todo-toggle",
-      "description": {
-        "kind": "markdown",
-        "value": ""
-      },
-      "attributes": [
-        {
-          "name": "checked",
-          "description": ""
-        }
-      ]
+      "attributes": []
     }
   ]
 }

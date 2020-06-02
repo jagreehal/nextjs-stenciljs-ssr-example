@@ -1,67 +1,119 @@
 {
-  "timestamp": "2019-09-19T20:59:20",
+  "timestamp": "2020-06-02T21:50:03",
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.4.0",
-    "typescriptVersion": "3.6.2"
+    "version": "1.14.0",
+    "typescriptVersion": "3.9.3"
   },
   "components": [
     {
-      "tag": "todo-count",
-      "filePath": "src/components/todo-count/todo-count.tsx",
+      "filePath": "./src/components/fetch-example/fetch-example.tsx",
       "encapsulation": "none",
-      "readme": "# todo-count\n\n\n",
+      "tag": "fetch-example",
+      "readme": "# fetch-example\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
         {
-          "name": "numberOfActiveTodos",
-          "type": "number",
+          "name": "q",
+          "type": "string",
           "mutable": false,
-          "attr": "number-of-active-todos",
+          "attr": "q",
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
+          "default": "\"stencil\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
           "optional": false,
           "required": false
         }
       ],
       "methods": [],
       "events": [],
+      "listeners": [],
       "styles": [],
-      "slots": []
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
     },
     {
-      "tag": "todo-filters",
-      "filePath": "src/components/todo-filters/todo-filters.tsx",
-      "encapsulation": "none",
-      "readme": "# todo-filters\n\n\n",
+      "filePath": "./src/components/my-component/my-component.tsx",
+      "encapsulation": "scoped",
+      "tag": "my-component",
+      "readme": "# my-component\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
         {
-          "name": "anyCompleted",
-          "type": "boolean",
+          "name": "count",
+          "type": "number",
           "mutable": false,
-          "attr": "any-completed",
+          "attr": "count",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The count value",
           "docsTags": [],
-          "default": "false",
+          "default": "0",
+          "values": [
+            {
+              "type": "number"
+            }
+          ],
+          "optional": true,
+          "required": false
+        },
+        {
+          "name": "first",
+          "type": "string",
+          "mutable": false,
+          "attr": "first",
+          "reflectToAttr": false,
+          "docs": "The first name (doc from the component)",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
           "optional": false,
           "required": false
         },
         {
-          "name": "filter",
+          "name": "last",
           "type": "string",
           "mutable": false,
-          "attr": "filter",
+          "attr": "last",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The lastish name",
           "docsTags": [],
-          "default": "'all'",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "middle",
+          "type": "string",
+          "mutable": false,
+          "attr": "middle",
+          "reflectToAttr": false,
+          "docs": "The middle name",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
           "optional": false,
           "required": false
         }
@@ -69,17 +121,8 @@
       "methods": [],
       "events": [
         {
-          "event": "clear-completed",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
-          "docsTags": []
-        },
-        {
-          "event": "set-filter",
-          "detail": "any",
+          "event": "event",
+          "detail": "number",
           "bubbles": true,
           "cancelable": true,
           "composed": true,
@@ -87,189 +130,207 @@
           "docsTags": []
         }
       ],
+      "listeners": [],
       "styles": [],
-      "slots": []
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
     },
     {
-      "tag": "todo-input",
-      "filePath": "src/components/todo-input/todo-input.tsx",
+      "filePath": "./src/components/scoped-example/scoped-example.tsx",
+      "encapsulation": "scoped",
+      "tag": "scoped-example",
+      "readme": "# scoped-example\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "first",
+          "type": "string",
+          "mutable": false,
+          "attr": "first",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "last",
+          "type": "string",
+          "mutable": false,
+          "attr": "last",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/shadow-example/shadow-example.tsx",
+      "encapsulation": "shadow",
+      "tag": "shadow-example",
+      "readme": "# shadow-example\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "first",
+          "type": "string",
+          "mutable": false,
+          "attr": "first",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "last",
+          "type": "string",
+          "mutable": false,
+          "attr": "last",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/slot-example/slot-example.tsx",
       "encapsulation": "none",
-      "readme": "# todo-input\n\n\n",
+      "tag": "slot-example",
+      "readme": "# slot-example\n\n\n",
+      "docs": "",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "first",
+          "type": "string",
+          "mutable": false,
+          "attr": "first",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "last",
+          "type": "string",
+          "mutable": false,
+          "attr": "last",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "./src/components/slot-scoped-example/slot-scoped-example.tsx",
+      "encapsulation": "scoped",
+      "tag": "slot-scoped-example",
+      "readme": "# slot-scoped-example\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [],
       "methods": [],
-      "events": [
-        {
-          "event": "input-submit",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
-          "docsTags": []
-        }
-      ],
+      "events": [],
+      "listeners": [],
       "styles": [],
-      "slots": []
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
     },
     {
-      "tag": "todo-item",
-      "filePath": "src/components/todo-item/todo-item.tsx",
-      "encapsulation": "none",
-      "readme": "# todo-item\n\n\n",
+      "filePath": "./src/components/slot-shadow-example/slot-shadow-example.tsx",
+      "encapsulation": "shadow",
+      "tag": "slot-shadow-example",
+      "readme": "# slot-shadow-example\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
-      "props": [
-        {
-          "name": "completed",
-          "type": "boolean",
-          "mutable": false,
-          "attr": "completed",
-          "reflectToAttr": false,
-          "docs": "",
-          "docsTags": [],
-          "default": "false",
-          "optional": false,
-          "required": false
-        },
-        {
-          "name": "text",
-          "type": "string",
-          "mutable": false,
-          "attr": "text",
-          "reflectToAttr": false,
-          "docs": "",
-          "docsTags": [],
-          "optional": false,
-          "required": false
-        }
-      ],
+      "props": [],
       "methods": [],
-      "events": [
-        {
-          "event": "item-changed",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
-          "docsTags": []
-        },
-        {
-          "event": "item-check",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
-          "docsTags": []
-        },
-        {
-          "event": "item-remove",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
-          "docsTags": []
-        }
-      ],
+      "events": [],
+      "listeners": [],
       "styles": [],
-      "slots": []
-    },
-    {
-      "tag": "todo-list",
-      "filePath": "src/components/todo-list/todo-list.tsx",
-      "encapsulation": "none",
-      "readme": "# todo-list\n\n\n",
-      "docs": "",
-      "docsTags": [],
-      "usage": {},
-      "props": [
-        {
-          "name": "todos",
-          "type": "string",
-          "mutable": false,
-          "attr": "todos",
-          "reflectToAttr": false,
-          "docs": "",
-          "docsTags": [],
-          "optional": false,
-          "required": false
-        }
-      ],
-      "methods": [],
-      "events": [
-        {
-          "event": "change-todo",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
-          "docsTags": []
-        },
-        {
-          "event": "check-todo",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
-          "docsTags": []
-        },
-        {
-          "event": "remove-todo",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
-          "docsTags": []
-        }
-      ],
-      "styles": [],
-      "slots": []
-    },
-    {
-      "tag": "todo-toggle",
-      "filePath": "src/components/todo-toggle/todo-toggle.tsx",
-      "encapsulation": "none",
-      "readme": "# todo-toggle\n\n\n",
-      "docs": "",
-      "docsTags": [],
-      "usage": {},
-      "props": [
-        {
-          "name": "checked",
-          "type": "boolean",
-          "mutable": false,
-          "attr": "checked",
-          "reflectToAttr": false,
-          "docs": "",
-          "docsTags": [],
-          "default": "false",
-          "optional": false,
-          "required": false
-        }
-      ],
-      "methods": [],
-      "events": [
-        {
-          "event": "toggle-all",
-          "detail": "any",
-          "bubbles": true,
-          "cancelable": true,
-          "composed": true,
-          "docs": "",
-          "docsTags": []
-        }
-      ],
-      "styles": [],
-      "slots": []
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
     }
   ]
 }

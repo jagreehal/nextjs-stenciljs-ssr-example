@@ -1,14 +1,14 @@
-import { Component, Prop, h, State, Host } from "@stencil/core";
-import { format } from "../../utils/utils";
+import { Component, Prop, h, Event, EventEmitter, State } from "@stencil/core";
 
 @Component({
   tag: "my-component",
   styleUrl: "my-component.css",
-  scoped: true
+  scoped: true,
+  shadow: false,
 })
 export class MyComponent {
   /**
-   * The first name
+   * The first name (doc from the component)
    */
   @Prop() first: string;
 
@@ -18,36 +18,70 @@ export class MyComponent {
   @Prop() middle: string;
 
   /**
-   * The last name
+   * The lastish name
    */
   @Prop() last: string;
 
-  @Prop()
-  initialCount: number;
+  /**
+   * The count value
+   */
+  @Prop() count?: number = 0;
 
-  @State()
-  count: number = this.initialCount || 100;
-  async click() {
-    console.log("click", this.count);
-    this.count++;
+  @State() counter: number = this.count || 0;
+  @State() date: Date = new Date();
+
+  @Event() event: EventEmitter<number>;
+
+  private timerID: NodeJS.Timeout;
+
+  buttonHandler() {
+    this.counter++;
+    this.event.emit(this.counter);
+  }
+
+  tick() {
+    console.log("update", this.date);
+    this.date = new Date();
   }
 
   private getText(): string {
-    return format(this.first, this.middle, this.last);
+    return `${this.first}, ${this.middle}, ${this.last}`;
+  }
+
+  componentWillLoad() {
+    console.log("is about to be rendered");
+    this.timerID = setInterval(() => this.tick(), 1000);
+  }
+
+  componentDidLoad() {
+    console.log("has been rendered");
+  }
+
+  componentWillUpdate() {
+    console.log("will update");
+  }
+
+  componentDidUpdate() {
+    console.log("did update");
+  }
+
+  componentDidUnload() {
+    console.log("has been removed from the DOM");
+    clearInterval(this.timerID);
   }
 
   render() {
     return (
-      <Host>
-        Hello, World! I'm {this.getText()}
+      <div class="message">
+        Hello, World! I'm {this.getText()} - Initial Count={this.count} -
+        Component Count={this.counter}
+        <button onClick={() => this.buttonHandler()}>+</button>
+        <hr />
+        <div>Date - {this.date.toLocaleTimeString()}</div>
         <div>
-          <h3>Change Local State</h3>
-          {this.count} -{" "}
-          <button class="green" onClick={() => this.click()}>
-            Click
-          </button>
+          <slot />
         </div>
-      </Host>
+      </div>
     );
   }
 }

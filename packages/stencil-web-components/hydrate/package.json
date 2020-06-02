@@ -1,6 +1,6 @@
 {
   "name": "stencil-web-components/hydrate",
-  "description": "StencilWebComponents component hydration app built for a NodeJS environment.",
+  "description": "StencilWebComponents component hydration app.",
   "main": "index.js",
   "types": "index.d.ts"
 }

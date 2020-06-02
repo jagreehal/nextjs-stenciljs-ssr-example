@@ -1,13 +1,13 @@
 {
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.8.2-0"
+    "version": "1.1.7"
   },
   "app": {
-    "namespace": "StencilWebComponents",
-    "fsNamespace": "stencil-web-components",
-    "components": 4,
-    "entries": 4,
+    "namespace": "StencilComponents",
+    "fsNamespace": "stencil-components",
+    "components": 2,
+    "entries": 2,
     "bundles": 0
   },
   "options": {
@@ -19,107 +19,49 @@
   },
   "components": [
     {
-      "tag": "component-with-event",
+      "tag": "my-app",
       "dependencyOf": [],
       "dependencies": []
     },
     {
-      "tag": "my-component",
+      "tag": "shadow-example",
       "dependencyOf": [],
-      "dependencies": []
-    },
-    {
-      "tag": "parent-component",
-      "dependencyOf": [],
-      "dependencies": [
-        "child-component"
-      ]
-    },
-    {
-      "tag": "child-component",
-      "dependencyOf": [
-        "parent-component"
-      ],
       "dependencies": []
     }
   ],
   "entries": [
     {
-      "entryId": "component-with-event.entry",
+      "entryId": "my-app.entry",
       "components": [
         {
-          "tag": "component-with-event",
+          "tag": "my-app",
           "dependencyOf": [],
           "dependencies": []
         }
       ],
       "bundles": [],
       "inputs": [
-        "/Users/jreehal/MEGA/js/s/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/component-with-event/component-with-event.tsx"
+        "/Users/jreehal/MEGA/js/s/stencil-integration-examples/packages/stencil-components/src/components/my-app/my-app.tsx"
       ],
       "modes": [
         "$"
       ],
       "encapsulations": [
-        "none"
+        "shadow"
       ]
     },
     {
-      "entryId": "my-component.entry",
+      "entryId": "shadow-example.entry",
       "components": [
         {
-          "tag": "my-component",
+          "tag": "shadow-example",
           "dependencyOf": [],
           "dependencies": []
         }
       ],
       "bundles": [],
       "inputs": [
-        "/Users/jreehal/MEGA/js/s/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/my-component/my-component.tsx"
-      ],
-      "modes": [
-        "$"
-      ],
-      "encapsulations": [
-        "scoped"
-      ]
-    },
-    {
-      "entryId": "parent-component.entry",
-      "components": [
-        {
-          "tag": "parent-component",
-          "dependencyOf": [],
-          "dependencies": [
-            "child-component"
-          ]
-        }
-      ],
-      "bundles": [],
-      "inputs": [
-        "/Users/jreehal/MEGA/js/s/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/parent-component/parent-component.tsx"
-      ],
-      "modes": [
-        "$"
-      ],
-      "encapsulations": [
-        "scoped"
-      ]
-    },
-    {
-      "entryId": "child-component.entry",
-      "components": [
-        {
-          "tag": "child-component",
-          "dependencyOf": [
-            "parent-component"
-          ],
-          "dependencies": []
-        }
-      ],
-      "bundles": [],
-      "inputs": [
-        "/Users/jreehal/MEGA/js/s/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/child-component/child-component.tsx"
+        "/Users/jreehal/MEGA/js/s/stencil-integration-examples/packages/stencil-components/src/components/shadow-example/shadow-example.tsx"
       ],
       "modes": [
         "$"
@@ -130,13 +72,8 @@
     }
   ],
   "sourceGraph": {
-    "src/components/child-component/child-component.tsx": [],
-    "src/components/component-with-event/component-with-event.tsx": [],
-    "src/components/my-component/my-component.tsx": [
-      "src/utils/utils"
-    ],
-    "src/components/parent-component/parent-component.tsx": [],
-    "src/utils/utils.ts": []
+    "src/components/my-app/my-app.tsx": [],
+    "src/components/shadow-example/shadow-example.tsx": []
   },
   "collections": []
 }

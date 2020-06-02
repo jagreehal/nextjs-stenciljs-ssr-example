@@ -7,12 +7,19 @@
 
 ## Properties
 
-| Property       | Attribute       | Description     | Type     | Default     |
-| -------------- | --------------- | --------------- | -------- | ----------- |
-| `first`        | `first`         | The first name  | `string` | `undefined` |
-| `initialCount` | `initial-count` |                 | `number` | `undefined` |
-| `last`         | `last`          | The last name   | `string` | `undefined` |
-| `middle`       | `middle`        | The middle name | `string` | `undefined` |
+| Property | Attribute | Description                             | Type     | Default     |
+| -------- | --------- | --------------------------------------- | -------- | ----------- |
+| `count`  | `count`   | The count value                         | `number` | `0`         |
+| `first`  | `first`   | The first name (doc from the component) | `string` | `undefined` |
+| `last`   | `last`    | The lastish name                        | `string` | `undefined` |
+| `middle` | `middle`  | The middle name                         | `string` | `undefined` |
+
+
+## Events
+
+| Event   | Description | Type                  |
+| ------- | ----------- | --------------------- |
+| `event` |             | `CustomEvent<number>` |
 
 
 ----------------------------------------------

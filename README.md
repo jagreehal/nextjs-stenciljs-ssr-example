@@ -21,7 +21,7 @@ app.prepare().then(() => {
     const renderedHtml = await stencil.renderToString(html);
     res.send(renderedHtml.html);
   });
-  server.listen(port, err => {
+  server.listen(port, (err) => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port}`);
   });
@@ -40,3 +40,39 @@ yarn start
 ```
 
 more info coming soon!
+
+import Document from "next/document";
+const hydrate = require("../hydrate");
+import cheerio from "cheerio";
+
+const StyleTags = ({ styles }) =>
+styles.map((inline, index) => (
+<style key={index} sty-id={inline.id}>
+{inline.inner}
+</style>
+));
+
+export default class ShopDocument extends Document {
+static async getInitialProps(ctx) {
+const initialProps = await Document.getInitialProps(ctx);
+const res = await hydrate.renderToString(initialProps.html, {
+runtimeLogging: true,
+});
+const s = cheerio.load(res.html);
+let styles = [];
+s("style").each((i, el) =>
+styles.push({ inner: s(el).html(), id: s(el).attr("sty-id") })
+);
+
+    return {
+      styles: (
+        <>
+          {initialProps.styles}
+          <StyleTags styles={styles} />
+        </>
+      ),
+      html: s("body").html(),
+    };
+
+}
+}
