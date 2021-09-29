@@ -55,13 +55,13 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/jreehal/MEGA/js/s/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/component-with-event/component-with-event.tsx"
+        "/Users/user/workspace/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/component-with-event/component-with-event.tsx"
       ],
       "modes": [
         "$"
       ],
       "encapsulations": [
-        "none"
+        "shadow"
       ]
     },
     {
@@ -75,7 +75,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/jreehal/MEGA/js/s/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/my-component/my-component.tsx"
+        "/Users/user/workspace/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/my-component/my-component.tsx"
       ],
       "modes": [
         "$"
@@ -97,7 +97,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/jreehal/MEGA/js/s/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/parent-component/parent-component.tsx"
+        "/Users/user/workspace/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/parent-component/parent-component.tsx"
       ],
       "modes": [
         "$"
@@ -119,7 +119,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/jreehal/MEGA/js/s/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/child-component/child-component.tsx"
+        "/Users/user/workspace/nextjs-stenciljs-ssr-example/packages/stencil-web-components/src/components/child-component/child-component.tsx"
       ],
       "modes": [
         "$"

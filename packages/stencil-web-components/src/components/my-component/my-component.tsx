@@ -26,6 +26,7 @@ export class MyComponent {
   initialCount: number;
 
   @State()
+  // @ts-ignore
   count: number = this.initialCount || 100;
   async click() {
     console.log("click", this.count);

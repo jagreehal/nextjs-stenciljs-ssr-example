@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { JSX as LocalJSX } from "stencil-web-components/loader";
+import { JSX as LocalJSX } from "stencil-react-components";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 type StencilProps<T> = {

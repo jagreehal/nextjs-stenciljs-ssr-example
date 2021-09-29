@@ -1,17 +1,10 @@
 import React, { useState } from "react";
-import useCustomElement from "../lib/use-custom-element";
+import { ComponentWithEvent } from 'stencil-react-components';
 import Head from "next/head";
 
 function Page({ initialMessage }) {
   const [message, setMessage] = useState(initialMessage);
   const [messages, setMessages] = useState([]);
-
-  const [customElementProps, ref] = useCustomElement({
-    "new-message": e => {
-      setMessages([...messages, e]);
-    },
-    message
-  });
 
   return (
     <>
@@ -27,11 +20,12 @@ function Page({ initialMessage }) {
 
       <hr />
       <div className="my-4 block">
-        <component-with-event
-          suppressHydrationWarning={true}
-          {...customElementProps}
-          ref={ref}
-        ></component-with-event>
+        <ComponentWithEvent
+          message={message}
+          onNew-message={e => {
+            setMessages([...messages, e.detail]);
+          }}
+        ></ComponentWithEvent>
       </div>
       <hr />
       <h5 className="mt-4">Messages</h5>

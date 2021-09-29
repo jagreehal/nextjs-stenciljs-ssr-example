@@ -11,14 +11,15 @@
     "use-custom-element": "^1.0.5",
     "express": "^4.17.1",
     "next": "^9.1.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "stencil-web-components": "*"
+    "react": "^16",
+    "react-dom": "^16",
+    "stencil-web-components": "*",
+    "stencil-react-components": "*"
   },
   "devDependencies": {
     "@types/node": "^12.11.5",
-    "@types/react": "^16.9.9",
-    "@types/react-dom": "16.9.2",
+    "@types/react": "^16",
+    "@types/react-dom": "^16",
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.6.0",
