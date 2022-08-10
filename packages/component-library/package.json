@@ -1,0 +1,33 @@
+{
+  "name": "component-library",
+  "version": "0.0.1",
+  "description": "Stencil Web Component Library",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "files": [
+    "dist/",
+    "loader/",
+    "hydrate/"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "dev": "stencil build --prod --watch --serve "
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@stencil/core": "2.17.3",
+    "@stencil/react-output-target": "0.3.1",
+    "@stencil/postcss": "^2.1.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.30.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "license": "MIT"
+}

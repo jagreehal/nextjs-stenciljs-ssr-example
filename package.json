@@ -5,7 +5,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "npm run build:stencil && npm run build:nextjs",
-    "build:stencil": "cd packages/stencil-web-components && npm run build",
+    "build:stencil": "cd packages/component-library && npm run build",
     "build:nextjs": "cd packages/nextjs-app && npm run build",
     "clean": "lerna clean",
     "start": "lerna exec --parallel -- npm run dev",
@@ -16,7 +16,6 @@
   "license": "ISC",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.22.0",
     "prettier": "^2.0.5"
   }
 }

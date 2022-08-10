@@ -5,7 +5,7 @@ This is a WIP demo of using server rendered Stencil components in Next.js
 It works by using a custom server, and rendering using Next.js and then by Stencil as shown in the example below.
 
 ```javascript
-const stencil = require("stencil-web-components/hydrate");
+const stencil = require("component-library/hydrate");
 const express = require("express");
 const next = require("next");
 
