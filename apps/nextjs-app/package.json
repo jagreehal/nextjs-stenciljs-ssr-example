@@ -1,0 +1,27 @@
+{
+  "name": "nextjs-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "component-library": "0.0.1",
+    "component-library-react": "0.0.1",
+    "next": "^12.2.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.6.5",
+    "@types/react": "^17.*",
+    "@types/react-dom": "^17.*",
+    "autoprefixer": "^10.4.8",
+    "copy-webpack-plugin": "^11.0.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.7.4"
+  }
+}

@@ -1,10 +1,3 @@
-# Example of using Next.js and Stencil components with SSR
-
-This is a WIP demo of using server rendered Stencil components in Next.js
-
-It works by using a custom server, and rendering using Next.js and then by Stencil as shown in the example below.
-
-```javascript
 const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');
@@ -42,14 +35,3 @@ app.prepare().then(() => {
     console.log(`> Ready on http://${hostname}:${port}`);
   });
 });
-```
-
-## trying it out
-
-Install using pnpm and then run
-
-```bash
-pnpm i
-pnpm build
-pnpm start
-```

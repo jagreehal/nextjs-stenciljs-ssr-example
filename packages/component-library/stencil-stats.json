@@ -1,0 +1,79 @@
+{
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.1.7"
+  },
+  "app": {
+    "namespace": "StencilComponents",
+    "fsNamespace": "stencil-components",
+    "components": 2,
+    "entries": 2,
+    "bundles": 0
+  },
+  "options": {
+    "minifyJs": true,
+    "minifyCss": true,
+    "hashFileNames": true,
+    "hashedFileNameLength": 8,
+    "buildEs5": true
+  },
+  "components": [
+    {
+      "tag": "my-app",
+      "dependencyOf": [],
+      "dependencies": []
+    },
+    {
+      "tag": "shadow-example",
+      "dependencyOf": [],
+      "dependencies": []
+    }
+  ],
+  "entries": [
+    {
+      "entryId": "my-app.entry",
+      "components": [
+        {
+          "tag": "my-app",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/stencil-integration-examples/packages/stencil-components/src/components/my-app/my-app.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "shadow-example.entry",
+      "components": [
+        {
+          "tag": "shadow-example",
+          "dependencyOf": [],
+          "dependencies": []
+        }
+      ],
+      "bundles": [],
+      "inputs": [
+        "/Users/jreehal/MEGA/js/s/stencil-integration-examples/packages/stencil-components/src/components/shadow-example/shadow-example.tsx"
+      ],
+      "modes": [
+        "$"
+      ],
+      "encapsulations": [
+        "scoped"
+      ]
+    }
+  ],
+  "sourceGraph": {
+    "src/components/my-app/my-app.tsx": [],
+    "src/components/shadow-example/shadow-example.tsx": []
+  },
+  "collections": []
+}
