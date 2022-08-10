@@ -5,74 +5,51 @@ This is a WIP demo of using server rendered Stencil components in Next.js
 It works by using a custom server, and rendering using Next.js and then by Stencil as shown in the example below.
 
 ```javascript
-const stencil = require("component-library/hydrate");
-const express = require("express");
-const next = require("next");
+const { createServer } = require('http');
+const { parse } = require('url');
+const next = require('next');
+const hydrate = require('component-library/hydrate');
 
-const dev = process.env.NODE_ENV !== "production";
-const app = next({ dev });
+const dev = process.env.NODE_ENV !== 'production';
+const hostname = 'localhost';
+const port = process.env.PORT || 5001;
+// when using middleware `hostname` and `port` must be provided below
+const app = next({ dev, hostname, port });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  const server = express();
+  createServer(async (req, res) => {
+    try {
+      // Be sure to pass `true` as the second argument to `url.parse`.
+      // This tells it to parse the query portion of the URL.
+      const parsedUrl = parse(req.url, true);
+      const { pathname, query } = parsedUrl;
 
-  server.get("/a", async (req, res) => {
-    const html = await app.renderToHTML(req, res, "/a", req.query);
-    const renderedHtml = await stencil.renderToString(html);
-    res.send(renderedHtml.html);
-  });
-  server.listen(port, (err) => {
+      if (pathname.startsWith('/_next') || pathname.startsWith('/__next')) {
+        await handle(req, res, parsedUrl);
+      } else {
+        const html = await app.renderToHTML(req, res, pathname, query);
+        const renderedHtml = await hydrate.renderToString(html);
+        res.end(renderedHtml.html);
+      }
+    } catch (err) {
+      console.error('Error occurred handling', req.url, err);
+      res.statusCode = 500;
+      res.end('internal server error');
+    }
+  }).listen(port, (err) => {
     if (err) throw err;
-    console.log(`> Ready on http://localhost:${port}`);
+    console.log(`> Ready on http://${hostname}:${port}`);
   });
 });
 ```
-
-Not sure if there's a way to do this without using a custom server or not having to specify every route ...yet
 
 ## trying it out
 
-Install using yarn and then run
+Install using pnpm and then run
 
 ```bash
-yarn
-yarn start
+pnpm i
+pnpm build
+pnpm start
 ```
-
-more info coming soon!
-
-import Document from "next/document";
-const hydrate = require("../hydrate");
-import cheerio from "cheerio";
-
-const StyleTags = ({ styles }) =>
-styles.map((inline, index) => (
-<style key={index} sty-id={inline.id}>
-{inline.inner}
-</style>
-));
-
-export default class ShopDocument extends Document {
-static async getInitialProps(ctx) {
-const initialProps = await Document.getInitialProps(ctx);
-const res = await hydrate.renderToString(initialProps.html, {
-runtimeLogging: true,
-});
-const s = cheerio.load(res.html);
-let styles = [];
-s("style").each((i, el) =>
-styles.push({ inner: s(el).html(), id: s(el).attr("sty-id") })
-);
-
-    return {
-      styles: (
-        <>
-          {initialProps.styles}
-          <StyleTags styles={styles} />
-        </>
-      ),
-      html: s("body").html(),
-    };
-
-}
-}

@@ -1,22 +1,18 @@
 import '../css/tailwind.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 function App({ Component, pageProps }) {
-  const [domLoaded, setDomLoaded] = useState(typeof window === 'undefined');
   useEffect(() => {
-    if (!domLoaded) {
-      const {
-        applyPolyfills,
-        defineCustomElements,
-      } = require('component-library/loader');
-      applyPolyfills().then(() => {
-        defineCustomElements(window);
-        setDomLoaded(true);
-      });
-    }
+    const {
+      applyPolyfills,
+      defineCustomElements,
+    } = require('component-library/loader');
+    applyPolyfills().then(() => {
+      defineCustomElements(window);
+    });
     return () => {};
   }, []);
-  return domLoaded && <Component {...pageProps} />;
+  return <Component {...pageProps} />;
 }
 
 export default App;

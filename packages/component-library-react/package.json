@@ -20,8 +20,8 @@
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.77.2",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -31,8 +31,8 @@
     "component-library": "^0.0.1"
   },
   "peerDependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "jest": {
     "preset": "ts-jest",

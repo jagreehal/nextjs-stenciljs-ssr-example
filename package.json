@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "build": "npm run build:stencil && npm run build:nextjs",
+    "build": "npm run build:stencil && npm run build:react && npm run build:nextjs",
     "build:stencil": "cd packages/component-library && npm run build",
-    "build:nextjs": "cd packages/nextjs-app && npm run build",
-    "clean": "lerna clean",
-    "start": "lerna exec --parallel -- npm run dev",
-    "test": "lerna run test",
-    "test:watch": "lerna exec -- npm test -- --watch"
+    "build:react": "cd packages/component-library-react && npm run build",
+    "build:nextjs": "cd apps/nextjs-app && npm run build",
+    "start": "cd apps/nextjs-app && npm run start"
   },
   "author": "",
   "license": "ISC",
