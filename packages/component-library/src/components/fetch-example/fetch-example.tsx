@@ -21,6 +21,7 @@ const Result = ({ result }) => {
 export class FetchExample {
   @Prop() q: string = "stencil";
   @State() results: any[] = [];
+  @State() loading: boolean = true;
 
   @Watch("q")
   watchHandler() {
@@ -28,10 +29,14 @@ export class FetchExample {
   }
 
   fetchRepos = () => {
+    this.loading = true;
     fetch(`${SEARCH}?q=${this.q}`)
       .then((r) => r.json())
       .then((json) => {
         this.results = (json && json.items) || [];
+      })
+      .finally(() => {
+        this.loading = false;
       });
   };
 
@@ -40,6 +45,8 @@ export class FetchExample {
   }
 
   render() {
+    if (this.loading) return <div>Loading...</div>;
+    if (!this.results.length) return <div>No results</div>;
     return (
       <div>
         <div class="list">

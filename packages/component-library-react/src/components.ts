@@ -5,8 +5,9 @@ import { createReactComponent } from './react-component-lib';
 
 import type { JSX } from 'component-library';
 
+import { defineCustomElements } from 'component-library/loader';
 
-
+defineCustomElements();
 export const FetchExample = /*@__PURE__*/createReactComponent<JSX.FetchExample, HTMLFetchExampleElement>('fetch-example');
 export const MyComponent = /*@__PURE__*/createReactComponent<JSX.MyComponent, HTMLMyComponentElement>('my-component');
 export const ScopedExample = /*@__PURE__*/createReactComponent<JSX.ScopedExample, HTMLScopedExampleElement>('scoped-example');

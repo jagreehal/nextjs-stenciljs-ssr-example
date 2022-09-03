@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /*!
- Stencil Mock Doc v2.17.3 | MIT Licensed | https://stenciljs.com
+ Stencil Mock Doc v2.17.4 | MIT Licensed | https://stenciljs.com
  */
 const CONTENT_REF_ID = 'r';
 const ORG_LOCATION_ID = 'o';
@@ -5695,11 +5695,16 @@ class FetchExample {
     registerInstance(this, hostRef);
     this.q = "stencil";
     this.results = [];
+    this.loading = true;
     this.fetchRepos = () => {
+      this.loading = true;
       fetch(`${SEARCH}?q=${this.q}`)
         .then((r) => r.json())
         .then((json) => {
         this.results = (json && json.items) || [];
+      })
+        .finally(() => {
+        this.loading = false;
       });
     };
   }
@@ -5710,6 +5715,10 @@ class FetchExample {
     this.fetchRepos();
   }
   render() {
+    if (this.loading)
+      return hAsync("div", null, "Loading...");
+    if (!this.results.length)
+      return hAsync("div", null, "No results");
     return (hAsync("div", null, hAsync("div", { class: "list" }, this.results.map((result) => (hAsync(Result, { result: result }))))));
   }
   static get watchers() { return {
@@ -5720,7 +5729,8 @@ class FetchExample {
     "$tagName$": "fetch-example",
     "$members$": {
       "q": [1],
-      "results": [32]
+      "results": [32],
+      "loading": [32]
     },
     "$listeners$": undefined,
     "$lazyBundleId$": "-",

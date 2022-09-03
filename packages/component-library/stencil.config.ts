@@ -23,7 +23,7 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: "component-library",
       proxiesFile: "../component-library-react/src/components.ts",
-      // includeDefineCustomElements: true,
+      includeDefineCustomElements: true,
     }),
   ],
 };
